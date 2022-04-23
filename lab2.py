@@ -46,14 +46,14 @@ print('Error of A: ', torch.nn.functional.mse_loss(A, data, reduction='sum'), '\
 # Q1.3
 project = V[:, :2]
 data_pca = data @ project
-'''plt.subplot(1, 2, 1)
+plt.subplot(1, 2, 1)
 plt.scatter(data_pca[:, 0], data_pca[:, 1], s=5)
 plt.title('Scatter of Projected Data')
 plt.subplot(1, 2, 2)
 plt.scatter(U_sgd[:, 0], U_sgd[:, 1], s=5)
 plt.title('Scatter of Reduced Matrix U')
 plt.savefig('pic.eps')
-plt.show()'''
+plt.show()
 
 # Q2.1
 df = df.sample(frac=1)
