@@ -98,3 +98,21 @@ plt.savefig('2.2.3.eps')
 plt.show()
 print(model(data_va), '\n', targets_va, '\n')
 print(torch.nn.functional.mse_loss(model(data_va), targets_va), '\n')
+
+predicts = model(data_va)
+predicts = torch.round(predicts)
+print(predicts)
+bingo = 0
+for i in range(len(predicts)):
+    if predicts[i] == targets_va[i]:
+        bingo += 1
+print(bingo / targets_va.shape[0])
+
+predicts = model(data_tr)
+predicts = torch.round(predicts)
+print(predicts)
+bingo = 0
+for i in range(len(predicts)):
+    if predicts[i] == targets_tr[i]:
+        bingo += 1
+print(bingo / targets_tr.shape[0])
