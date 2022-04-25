@@ -4,7 +4,7 @@ from torch.utils import data
 import matplotlib.pyplot as plt
 
 
-'''# Q1.1
+# Q1.1
 def rastrigin(x, A):
     return A * 2 + (x @ x) - torch.sum(A * torch.cos(2 * torch.pi * x))
 
@@ -79,7 +79,7 @@ for i in range(len(steps)):
     plt.plot(range(1, epochs + 1), steps[i])
     plt.title(labels[i])
 plt.savefig('1.1.1.eps')
-plt.show()'''
+plt.show()
 
 # Q2.1
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases' + '/iris/iris.data', header=None)
